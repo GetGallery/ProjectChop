@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เปลี่ยนรูปภาพและแสดงข้อความตามเงื่อนไข</title>
+  <style>
+    /* สไตล์สำหรับรูปภาพ */
+    #image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    /* ปุ่ม */
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    /* สไตล์สำหรับข้อความ */
+    #message {
+      font-size: 24px;
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>เปลี่ยนรูปภาพและแสดงข้อความตามเงื่อนไข</h1>
+  <p>กดปุ่มด้านล่างเพื่อเปลี่ยนรูปภาพ</p>
+
+  <!-- รูปภาพที่จะแสดง -->
+  <img id="image" src="card11.png" alt="รูปภาพ" />
+
+  <!-- ข้อความแสดงผลตามเงื่อนไข -->
+  <div id="message"></div>
+
+  <!-- ปุ่มเปลี่ยนรูปภาพ -->
+  <button class="button" onclick="changeImage('card11.png')">รูปภาพ 1</button>
+  <button class="button" onclick="changeImage('card12.png')">รูปภาพ 2</button>
+
+  <!-- JavaScript สำหรับเปลี่ยนรูปภาพและแสดงข้อความตามเงื่อนไข -->
+  <script>
+    function changeImage(imageSrc) {
+      // เปลี่ยน src ของรูปภาพ
+      document.getElementById("image").src = imageSrc;
+
+      // ตรวจสอบเงื่อนไขและแสดงข้อความ
+      let message = document.getElementById("message");
+      if (imageSrc === 'card11.png') {
+        message.textContent = "1";
+      } else if (imageSrc === 'card12.png') {
+        message.textContent = "2";
+      } else {
+        message.textContent = ""; // กรณีที่ไม่มีรูปภาพที่ตรงกับเงื่อนไข
+      }
+    }
+  </script>
+</body>
+</html>

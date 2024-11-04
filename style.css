@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("img/Wallpaper.jpg");
+
+}
+nav{
+    border: #d4ac64 solid 15px;
+
+}
+.container{
+    max-width: 1840px;
+    margin: 0 auto;
+    /* border: blue solid 1px; */
+    
+}
+.nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.menu{
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    margin: 1rem;
+    width: 100px;
+    text-align: center;
+}
+a{
+    color: #d4ac64;
+    text-decoration: none;
+}
+.logo a {
+    font-size: 2.5rem;
+}   
+li a {
+    font-size: 1.3rem;
+}
+.menu li {
+    padding: 1rem 0;
+    margin-left: 0;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+.menu li:hover{
+    background-color: white;
+    border-radius: 15px;
+
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .nav-con{
+        padding: 3rem 0 ;
+        flex-direction: column;
+        height: auto;
+    }
+    .menu{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .menu li {
+        padding: 1rem 0;
+        margin-left: 0;
+        transition: 0.5s;
+    }
+    .menu li:hover{
+        background-color: #222;
+
+    }
+}
+
+/* //// */
+.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 2s;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d4ac64;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .buttons button:hover{
+    background-color: #ca8300;
+    transition: 0.5s;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #d4ac64;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+}
+
+
+/* card */
+h1 {
+    color: #d4ac64;
+}
+h1:hover{
+    color: #ca8300;
+    transition: 0.5s;
+
+}
+.menu-card{
+    border: #d4ac64 solid 15px;
+    margin-top: 50px;
+    
+}
+.card{
+    display: flex;
+    width: 1100px;
+    margin-left: 400px;
+    align-items: center;
+    /* border: green solid 1px; */
+
+}
+.product-card {
+    text-align: center;
+    border-radius: 22px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+    background-color: #d4ac64;
+    
+}
+.product-card:hover{
+    background-color: #ca8300;
+    transition: 0.5s;
+}
+.product-img{
+    
+
+}
+
+.product-img img{
+    width: 150px;
+
+}
+
+/* footer */
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; /* ซ่อน modal โดยค่าเริ่มต้น */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.product-card {
+
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}

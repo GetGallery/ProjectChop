@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("img/Wallpaper.jpg");
+
+}
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 100px;
+    width: 380px; /* ลดความกว้างลง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    margin-right: 10px; /* เพิ่มระยะห่างด้านขวา */
+}
+
+.card:last-child {
+    margin-right: 0; /* ลบระยะห่างด้านขวาสำหรับ Card ตัวสุดท้าย */
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav{
+    border: #d4ac64 solid 15px;
+
+}
+.container{
+    max-width: 1840px;
+    margin: 0 auto;
+    /* border: blue solid 1px; */
+    
+}
+.nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.menu{
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    margin: 1rem;
+    width: 100px;
+    text-align: center;
+}
+a{
+    color: #d4ac64;
+    text-decoration: none;
+}
+.logo a {
+    font-size: 2.5rem;
+}   
+li a {
+    font-size: 1.3rem;
+}
+.menu li {
+    padding: 1rem 0;
+    margin-left: 0;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+.menu li:hover{
+    background-color: white;
+    border-radius: 15px;
+
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .nav-con{
+        padding: 3rem 0 ;
+        flex-direction: column;
+        height: auto;
+    }
+    .menu{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .menu li {
+        padding: 1rem 0;
+        margin-left: 0;
+        transition: 0.5s;
+    }
+    .menu li:hover{
+        background-color: #222;
+
+    }
+}
